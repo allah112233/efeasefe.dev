@@ -9,31 +9,18 @@ export interface Project {
 
 export const ProjectData: Project[] = [
   {
-    title: 'itsnebula.net',
+    title: 'efeasefe.wtf',
     description:
-      "The website you're currently on! Forked from ven.earth, made with Next.js and utilises serverless functions.",
-    href: 'https://github.com/itsnebulalol/itsnebula.net',
+      "Life is good",
+    href: 'https://github.com/efeasefe',
     icon: ['fas', 'home'],
   },
   {
-    title: 'zyno.us',
+    title: 'Shoto Music LLC',
     description:
-      "The privacy respecting self hosted services.",
-    href: 'https://zyno.us',
-    icon: ['fas', 'wifi'],
-  },
-  {
-    title: 'last.fm-discord',
-    description:
-      "Show your last.fm playing status on Discord.",
-    href: 'https://github.com/itsnebulalol/last.fm-discord',
+      "My own record label",
+    href: 'https://www.instagram.com/shotomusic.llc/',
     icon: ['fas', 'music'],
   },
-  {
-    title: 'Permasigner',
-    description:
-      "Permanently sign IPAs on jailbroken iDevices (persists on stock).",
-    href: 'https://github.com/itsnebulalol/permasigner',
-    icon: ['fas', 'pen'],
-  },
+  
 ]
