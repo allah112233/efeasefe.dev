@@ -8,7 +8,7 @@ import readingTime from 'reading-time'
 import rehypePrism from '@mapbox/rehype-prism'
 import matter from 'gray-matter'
 import Image from 'next/image'
-import NebulaImage from '@public/img/nebula.png'
+import NebulaImage from '@public/img/efeasefe.png'
 import { GetStaticProps, InferGetStaticPropsType } from 'next'
 import { ParsedUrlQuery } from 'querystring'
 
@@ -29,7 +29,7 @@ export default function Posts({
         <p className="ml-2">
           <a
             className="focus:outline-none transition duration-300 ease-in-out hover:text-indigo-900 dark:hover:text-indigo-200"
-            href="https://twitter.com/itsnebulalol"
+            href="https://twitter.com/efeasefe1337"
             rel="noopener noreferrer"
             target="_blank"
           >
