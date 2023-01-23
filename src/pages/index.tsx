@@ -1,77 +1,64 @@
-import { MainLayout } from 'layouts/MainLayout'
-import { GenericMeta } from 'components/GenericMeta'
-import { v4 as uuidv4 } from 'uuid'
-import { useTheme } from 'next-themes'
-import dynamic from 'next/dynamic'
-import toast from 'react-hot-toast'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { IconName } from '@fortawesome/fontawesome-svg-core'
-import { Account, AccountData } from 'data/accounts'
-import { NowPlayingCard } from 'components/NowPlayingCard'
-const Time = dynamic(() => import('components/Time'), {
-  ssr: false,
-})
+import 'styles/globals.css'
+import 'lib/fontawesome'
+import { SWRConfig } from 'swr'
+import { ThemeProvider } from 'next-themes'
+import { AppProps } from 'next/app'
+import { Toaster } from 'react-hot-toast'
+import { Navbar } from 'components/Nav/Navbar'
 
-const SocialLink = ({ name, href, icon, copyEmail }: Account) => {
+const App = ({ Component, pageProps }: AppProps) => {
   return (
-    <a
-      aria-label={name}
-      onClick={() => copyEmail && copyEmail()}
-      className="cursor-pointer fill-current focus:outline-none transition duration-300 ease-in-out hover:text-indigo-900 dark:hover:text-indigo-200"
-      href={href}
-      rel="noopener noreferrer"
-      target="_blank"
+    <SWRConfig
+      value={{
+        fetcher: (url: string) => fetch(`/api/${url}`).then((res) => res.json()),
+      }}
     >
-      <FontAwesomeIcon size="1x" icon={icon ? icon : ['fab', name.toLowerCase() as IconName]} />
-    </a>
+      <ThemeProvider attribute="class" defaultTheme="dark">
+        <Toaster position="bottom-left" />
+        <div className="flex flex-col min-h-screen">
+          <div id="particle-container">
+            <div className=""></div>
+            <div className=""></div>
+            <div className=""></div>
+            <div className=""></div>
+            <div className=""></div>
+            <div className=""></div>
+            <div className=""></div>
+            <div className=""></div>
+            <div className=""></div>
+            <div className=""></div>
+            <div className=""></div>
+            <div className=""></div>
+            <div className=""></div>
+            <div className=""></div>
+            <div className=""></div>
+            <div className=""></div>
+            <div className=""></div>
+            <div className=""></div>
+            <div className=""></div>
+            <div className=""></div>
+            <div className=""></div>
+            <div className=""></div>
+            <div className=""></div>
+            <div className=""></div>
+            <div className=""></div>
+            <div className=""></div>
+            <div className=""></div>
+            <div className=""></div>
+            <div className=""></div>
+            <div className=""></div>
+            <div className=""></div>
+            <div className=""></div>
+            <div className=""></div>
+          </div>
+          <Navbar />
+          <div className="h-full lg:px-0 px-10">
+            <Component {...pageProps} />
+          </div>
+        </div>
+      </ThemeProvider>
+    </SWRConfig>
   )
 }
 
-const Home = () => {
-  const { theme } = useTheme()
-
-  const copyEmail = () => {
-    navigator.clipboard.writeText('efeasefe@protonçme')
-    theme === 'dark'
-      ? toast.success('Copied email to clipboard!', {
-          style: {
-            background: '#333',
-            color: '#fff',
-          },
-        })
-      : toast.success('Copied email to clipboard!')
-  }
-
-  return (
-    <>
-      <a rel="me" href="https://ptb.discord.com/users/694942062163918869" style={{"display": "none"}}></a>
-      <GenericMeta title="Efeasefe" description="developer and student from Turkey." />
-
-      <MainLayout margin={false}>
-        <h1 className="text-6xl font-bold">Efeasefe</h1>
-        <p className="text-lg text-gray-600 dark:text-gray-400 max-w-sm mt-2">
-        developer and student from Turkey.
-        </p>
-        <div className="grid grid-flow-col w-48 mt-3 text-lg">
-          {AccountData.map((account) => (
-            <SocialLink
-              key={uuidv4()}
-              name={account.name}
-              href={account.href}
-              icon={account.icon}
-              copyEmail={copyEmail}
-            />
-          ))}
-        </div>
-        <div className="grid my-8 gap-2">
-          <Time />
-        </div>
-        <div>
-          <NowPlayingCard />
-        </div>
-      </MainLayout>
-    </>
-  )
-}
-
-export default Home
+export default App
