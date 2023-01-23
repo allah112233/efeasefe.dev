@@ -1,11 +1,11 @@
 {
-  "name": "itsnebula.net",
+  "name": "efeasefe.wtf",
   "description": "My personal website.",
-  "homepage": "https://itsnebula.net",
-  "repository": "github:itsnebulalol/itsnebula.net",
+  "homepage": "https://efeasefe.dev",
+  "repository": "github.com/allah112233/efeasefe.dev",
   "version": "1.0.0",
   "private": true,
-  "author": "Nebula <me@itsnebula.net>",
+  "author": "efeasefe <efeasefe@proto.nme>",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
