@@ -5,7 +5,7 @@
   "repository": "github.com/allah112233/efeasefe.dev",
   "version": "1.0.0",
   "private": true,
-  "author": "efeasefe <efeasefe@proto.nme>",
+  "author": "efeasefe <efeasefe@proton.me>",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
