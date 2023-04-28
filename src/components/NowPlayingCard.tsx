@@ -7,7 +7,7 @@ import SongImage from '@public/img/song.webp'
 const { NEXT_PUBLIC_LASTFM_API_KEY } = process.env
 
 export const NowPlayingCard = () => {
-  const lastFM = useLastFM("efeasefe","bd9540492d354cfd18550466bf06f22e",5e3,"large")
+  const lastFM = useLastFM('efeasefe', NEXT_PUBLIC_LASTFM_API_KEY!, 5000, 'large')
 
   if (['connecting', 'error'].includes(lastFM.status)) return null
 
@@ -46,7 +46,7 @@ export const NowPlayingCard = () => {
               : 'Not listening to anything'}
           </div>
           <p className="text-xxs">
-            <FontAwesomeIcon className="fill-current" icon={["fab", "spotify"]} /> Spotify
+            <FontAwesomeIcon className="fill-current text-green-600" icon={['fab', 'spotify']} /> Spotify
           </p>
         </div>
       </a>
