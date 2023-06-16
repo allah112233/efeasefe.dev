@@ -50,7 +50,7 @@ const Home = () => {
       <MainLayout margin={false}>
         <h1 className="text-6xl font-bold">Efeasefe</h1>
         <p className="text-lg text-gray-600 dark:text-gray-400 max-w-sm mt-2">
-        developer and student from Turkey.
+        developer and student from New York.
         </p>
         <div className="grid grid-flow-col w-48 mt-3 text-lg">
           {AccountData.map((account) => (
