@@ -8,9 +8,9 @@ export const ThemeSwitcher = () => {
 
   const toggle = () => {
     if (theme === 'dark') {
-      setTheme('light')
-    } else {
       setTheme('dark')
+    } else {
+      setTheme('light')
     }
   }
 
