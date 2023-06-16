@@ -45,7 +45,7 @@ const Home = () => {
   return (
     <>
       <a rel="me" href="https://ptb.discord.com/users/694942062163918869" style={{"display": "none"}}></a>
-      <GenericMeta title="Efeasefe" description="developer and student from Turkey." />
+      <GenericMeta title="Efeasefe" description="developer and student from New York." />
 
       <MainLayout margin={false}>
         <h1 className="text-6xl font-bold">Efeasefe</h1>
